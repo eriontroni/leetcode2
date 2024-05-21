@@ -18,16 +18,14 @@ public:
 
         
         while (current != nullptr) {
-            // Store the next node to prevent loss of reference
             nextNode = current->next;
-            // Reverse the link
+
             current->next = prev;
-            // Move prev and current pointers one step forward
+            
             prev = current;
             current = nextNode;
         }
 
-        // 'prev' now points to the new head of the reversed list
         return prev;
     }
 };
